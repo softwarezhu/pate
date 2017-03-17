@@ -10,6 +10,7 @@ Here are some advantages:
 * PATE is Extremely Extensible. PATE is designed for extensible, You can create your own Syntax to enhance PATE's feature.
 * PATE is Extremely Easy. There are only 1/10 codes of PHPTAL, but much more powerful.
 * PATE's compiled file is VERY READABLE. But PHPTAL's compiled file is complicated and very hard to read.
+* PHPTAL is too strict with dom and variables, error occurs frequently. Pate is friendly.
 
 Requirements
 ---

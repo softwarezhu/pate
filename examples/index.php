@@ -11,10 +11,11 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $template = new PateTemplate();
 $template->loadHtmlFile('data/bigHtml.html');
-$xml = $template->compile();
-$content = $xml->saveHTML();
-$replacedContent = preg_replace_callback('/\&lt\;\?php%20.+\?\&gt\;/', function($match){
-    return urldecode(htmlspecialchars_decode($match[0]));
-}, $content);
+$content = $template->render([
+    'block1' => 'aaa',
+    'block9' => array(
+        'products' => null
+    ),
+]);
 
-file_put_contents('result2.php', $replacedContent);
+file_put_contents('result2.php', $content);
