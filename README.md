@@ -30,4 +30,70 @@ With composer
 Examples
 ==============
 
-## HOW TO USE
+## Attributes
+
+Template file
+
+```html
+<html>
+<head>
+</head>
+<body>
+<img tal:attributes="src data/src; alt data/title"/>
+</body>
+</html>
+```
+
+Do render(ie. This template is named 'template.html')
+
+```php
+use Pate\PateTemplate;
+
+$template = new PateTemplate();
+$template->loadHtmlFile('template.html');
+$content = $template->render(array(
+    'data' => array(
+        'src' => 'htttp://github.com/logo.jpg',
+        'title' => 'Github Logo'
+    )
+));
+
+echo $content;
+```
+
+The render result will be
+
+```html
+<html>
+    <head>
+    </head>
+    <body>
+        <img src="htttp://github.com/logo.jpg" alt="Github Logo"/>
+    </body>
+</html>
+```
+
+
+Template Syntax
+========
+## Attributes
+> <img tal:attributes="src data/src; alt data/title"/>
+
+The img *src* and *alt* attributes will be replaced by the data['src'] value and data['title'] value. 
+The multiple attributes use ";" to separate.
+
+## Text
+> <span tal:content="data/title">This content will be replaced after rendered. </span>
+
+## Loop
+> <tr tal:repeat="product products" tal:content="product/title">This content will be replaced by product/title after rendered. </tr>
+
+If the count of products is N, there will be N tr lines. 
+
+## If
+> <div tal:condition="product/isPromote" tal:content="product/discount">If product/isPromote is false, this block will be removed from the dom. </div>
+
+`tal:condition` likes `if` in php. 
+
+## Replace
+> <div tal:replace="123">This entire DIV will be replaced with '123'(not the inner text). </div>
