@@ -96,4 +96,15 @@ abstract class AbstractProcessor
         }
         $element->appendChild($exp);
     }
+    
+    public function replace(\DOMElement $element, $phpExpression = null)
+    {
+        $phpExpression = trim($phpExpression);
+        if (empty($phpExpression)) {
+            $element->parentNode->removeChild($element);
+        } else {
+            $this->before($element, $phpExpression);
+            $element->parentNode->removeChild($element);
+        }
+    }
 }
