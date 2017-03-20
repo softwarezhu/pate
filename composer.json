@@ -1,7 +1,7 @@
 {
   "name": "softwarezhu/pate",
   "description": "Pate is a PHP Attribute Template Engine inspired by PHPTAL but run much faster. It use native dom to make it fast.",
-  "version":"1.0",
+  "version":"2.0",
   "license": "LGPL-2.1+",
   "minimum-stability": "stable",
   "keywords": [
@@ -16,11 +16,11 @@
     }
   ],
   "require": {
-    "php": ">=5.4",
+    "php": ">=5.3",
     "ext-dom": "*"
   },
   "require-dev": {
-    "php": ">=5.4",
+    "php": ">=5.3",
     "phpunit/phpunit": "~4.8"
   },
   "autoload": {

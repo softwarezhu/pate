@@ -104,9 +104,9 @@ abstract class AbstractProcessor
         $var1 = substr($value, 0, $pos);
         $var2 = substr($value, $pos);
 
-        return [
+        return array(
             $var1,
             $var2
-        ];
+        );
     }
 }

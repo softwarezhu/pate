@@ -18,14 +18,14 @@ class PateTemplate
 {
     protected $dom;
     
-    public $defaultProcessors = [
+    public $defaultProcessors = array(
         DefineProcessor::class,
         ConditionProcessor::class,
         RepeatProcessor::class,
         AttributesProcessor::class,
         ContentProcessor::class,
         ReplaceProcessor::class,
-    ];
+    );
 
     protected $processors = null;
 
