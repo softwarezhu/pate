@@ -26,13 +26,13 @@ class PateTemplate
         ReplaceProcessor::class,
     ];
 
-    protected $compileDir = '/tmp';
+    protected $compileDir;
 
     protected $cache = true;
 
     protected $debugMode = true;
 
-    protected $compiledFileName;
+    public $compiledFileName;
     
     public function __construct()
     {
@@ -40,6 +40,7 @@ class PateTemplate
         $dom->formatOutput = true;
 
         $this->dom = $dom;
+        $this->compileDir = sys_get_temp_dir();
     }
     
     public function loadHtml($data)
@@ -64,7 +65,7 @@ class PateTemplate
         $replacedContent = preg_replace_callback('/\&lt\;\?php%20.+\?\&gt\;/', function($match){
             return urldecode(htmlspecialchars_decode($match[0]));
         }, $content);
-        
+
         file_put_contents($this->compiledFileName, $replacedContent);
     }
 
@@ -75,26 +76,22 @@ class PateTemplate
     {
         // 查找变量，并增加scope
         if ($element->hasChildNodes()) {
-            for ($i = 0; $i < $element->childNodes->length; $i++) {
-                $childNode = $element->childNodes->item($i);
-
+            foreach ($element->childNodes as $childNode) {
                 $this->parseElement($childNode);
             }
         }
 
         if ($element->hasAttributes()) {
-            for ($i = 0; $i < $element->attributes->length; $i++) {
-                foreach ($this->processors as $processorName) {
-                    /**
-                     * @var TemplateProcessor
-                     */
-                    $processor = new $processorName();
-                    if (!$element->hasAttribute($processor->name)) {
-                        continue;
-                    }
-                    
-                    $processor->process($element, $element->getAttribute($processor->name));
+            foreach ($this->processors as $processorName) {
+                /**
+                 * @var TemplateProcessor
+                 */
+                $processor = new $processorName();
+                if (!$element->hasAttribute($processor->name)) {
+                    continue;
                 }
+
+                $processor->process($element, $element->getAttribute($processor->name));
             }
 
         }
@@ -104,7 +101,7 @@ class PateTemplate
     public function render($_data = array(), $_return = true)
     {
         $this->compile();
-        
+
         extract($_data);
 
         $_oldSetting = error_reporting(E_ALL ^ E_NOTICE);

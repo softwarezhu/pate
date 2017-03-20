@@ -15,7 +15,7 @@ class ContentProcessor extends AbstractProcessor
     {
         $exp = $this->resolveExpression($expression);
 
-        $this->text($element, $exp);
+        $this->text($element, 'echo ' . $exp . ';');
         
         $element->removeAttribute($this->name);
     }
