@@ -13,14 +13,11 @@ class DefineProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $value = trim($expression);
-        $pos = strpos($value, ' ');
-        $var1 = substr($value, 0, $pos);
-        $var2 = substr($value, $pos);
+        list($name, $var2) = $this->splitExpression($expression);
 
         $exp = $this->resolveExpression($var2);
         
-        $startCode = '$' . $var1 . ' = ' . $exp . '; ';
+        $startCode = '$' . $name . ' = ' . $exp . '; ';
         
         $this->before($element, $startCode);
        

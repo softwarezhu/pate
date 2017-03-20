@@ -25,14 +25,33 @@ abstract class AbstractProcessor
         // php格式
         if (strpos($expression, 'php:') === 0) {
             $exp = preg_replace('/php:/', '', $expression);
+            // 替换repeat.index
+            $exp = preg_replace('/repeat\.\w+\.index/', '$_index == 0', $exp);
+            // 替换repeat.end
+            $exp = preg_replace('/repeat\.(\w+)\.end/', '$_index == count($$1)', $exp);
+            // 替换is_mini
+            $exp = preg_replace('/is_mini/', '$is_mini', $exp);
             // 里面的variable格式需要替换。不带$符号，且有数组形式
             if (strpos($exp, '$') === false && preg_match('/(\w+)\[/', $exp, $matches) === 1) {
                 $exp = preg_replace('/(\w+)\[/', '$$1[', $exp);
             }
             return $exp;
+        } else if (strpos($expression, 'not:') === 0) {
+            $exp = '!(' . $this->resolveExpression(preg_replace('/not:/', '', $expression)) . ')';
+            return $exp;
+        }
+        $exp = $expression;
+        // 替换repeat.index
+        $exp = preg_replace('/repeat\/\w+\/index/', '$_index == 0', $exp);
+        // 替换repeat.end
+        $exp = preg_replace('/repeat\/(\w+)\/end/', '$_index == count($$1)', $exp);
+
+        if (empty($exp)) {
+            return $exp;
         }
         // phptal格式
-        if (strpos($expression, '$') === false) {
+        if (strpos($exp, '$') === false) {
+
             $arr = explode('/', $expression);
             $str = '$';
             for ($i = 0; $i < count($arr); $i++) {
@@ -52,7 +71,7 @@ abstract class AbstractProcessor
             return $str;
         }
 
-        return $expression;
+        return $exp;
     }
 
     /**
@@ -89,22 +108,38 @@ abstract class AbstractProcessor
     
     public function text(\DOMElement $element, $phpExpression)
     {
-        $exp = new \DOMProcessingInstruction('php', $phpExpression . ' ?');
-
         while($element->childNodes->length){
             $element->removeChild($element->firstChild);
         }
-        $element->appendChild($exp);
+        if ($phpExpression) {
+            $exp = new \DOMProcessingInstruction('php', $phpExpression . ' ?');
+            $element->appendChild($exp);
+        }
+
     }
     
     public function replace(\DOMElement $element, $phpExpression = null)
     {
         $phpExpression = trim($phpExpression);
         if (empty($phpExpression)) {
-            $element->parentNode->removeChild($element);
+//            $element->parentNode->removeChild($element);
         } else {
             $this->before($element, $phpExpression);
-            $element->parentNode->removeChild($element);
+//            $element->parentNode->removeChild($element);
         }
+    }
+    
+    // 把tal的属性内key value提取出来
+    protected function splitExpression($str)
+    {
+        $value = trim($str);
+        $pos = strpos($value, ' ');
+        $var1 = substr($value, 0, $pos);
+        $var2 = substr($value, $pos);
+
+        return [
+            $var1,
+            $var2
+        ];
     }
 }

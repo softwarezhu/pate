@@ -26,6 +26,10 @@ class PateTemplate
         ReplaceProcessor::class,
     ];
 
+    protected $processorInstances = null;
+    
+    protected $tobeDeleted = null;
+
     protected $compileDir;
 
     protected $cache = true;
@@ -58,6 +62,7 @@ class PateTemplate
     
     public function compile()
     {
+        $this->initProcessors();
         $this->parseElement($this->dom);
 
         $content = $this->dom->saveHTML();
@@ -69,33 +74,46 @@ class PateTemplate
         file_put_contents($this->compiledFileName, $replacedContent);
     }
 
+    public function initProcessors()
+    {
+        $processorList = array();
+        foreach ($this->processors as $processorName) {
+            /**
+             * @var TemplateProcessor
+             */
+            $processorList[] = new $processorName();
+        }
+
+        $this->processorInstances = $processorList;
+    }
     /**
      * @param DOMNode $element
      */
     public function parseElement(\DOMNode $element)
     {
-        // 查找变量，并增加scope
+        // 如果有待删除的，则删除之
+        if ($this->tobeDeleted) {
+            $this->tobeDeleted->parentNode->removeChild($this->tobeDeleted);
+            $this->tobeDeleted = null;
+        }
+        if ($element->hasAttributes()) {
+            foreach ($this->processorInstances as $processor) {
+                if (!$element->hasAttribute($processor->name)) {
+                    continue;
+                }
+                $isDelete = $processor->process($element, $element->getAttribute($processor->name));
+                if ($isDelete) {
+                    $this->tobeDeleted = $element;
+                    return;
+                }
+            }
+        }
+        
         if ($element->hasChildNodes()) {
             foreach ($element->childNodes as $childNode) {
                 $this->parseElement($childNode);
             }
         }
-
-        if ($element->hasAttributes()) {
-            foreach ($this->processors as $processorName) {
-                /**
-                 * @var TemplateProcessor
-                 */
-                $processor = new $processorName();
-                if (!$element->hasAttribute($processor->name)) {
-                    continue;
-                }
-
-                $processor->process($element, $element->getAttribute($processor->name));
-            }
-
-        }
-
     }
 
     public function render($_data = array(), $_return = true)

@@ -18,5 +18,7 @@ class ReplaceProcessor extends AbstractProcessor
         $exp = $this->resolveExpression($value);
         
         $this->replace($element, $exp);
+        
+        return true;
     }
 }

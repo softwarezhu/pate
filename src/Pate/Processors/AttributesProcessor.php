@@ -20,7 +20,7 @@ class AttributesProcessor extends AbstractProcessor
             if (empty($expression)) {
                 continue;
             }
-            list($attr, $val) = preg_split('/\s+/', $expression);
+            list($attr, $val) = $this->splitExpression($expression);
 
             $exp = $this->resolveExpression($val);
             $element->setAttribute($attr, '<?php echo ' . $exp . '; ?>');
