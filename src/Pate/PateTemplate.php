@@ -67,7 +67,7 @@ class PateTemplate
 
         $content = $this->dom->saveHTML();
 
-        $replacedContent = preg_replace_callback('/\&lt\;\?php%20.+\?\&gt\;/', function($match){
+        $replacedContent = preg_replace_callback('/\&lt\;\?php.+\?\&gt\;/', function($match){
             return urldecode(htmlspecialchars_decode($match[0]));
         }, $content);
 
