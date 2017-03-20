@@ -78,23 +78,33 @@ The render result will be
 Template Syntax
 ========
 ## Attributes
-> <img tal:attributes="src data/src; alt data/title"/>
+```html
+ <img tal:attributes="src data/src; alt data/title"/>
+```
 
 The img *src* and *alt* attributes will be replaced by the data['src'] value and data['title'] value. 
 The multiple attributes use ";" to separate.
 
 ## Text
-> <span tal:content="data/title">This content will be replaced after rendered. </span>
+```html
+ <span tal:content="data/title">This content will be replaced after rendered. </span>
+```
 
 ## Loop
-> <tr tal:repeat="product products" tal:content="product/title">This content will be replaced by product/title after rendered. </tr>
+```html
+<tr tal:repeat="product products" tal:content="product/title">This content will be replaced by product/title after rendered. </tr>
+```
 
 If the count of products is N, there will be N tr lines. 
 
 ## If
-> <div tal:condition="product/isPromote" tal:content="product/discount">If product/isPromote is false, this block will be removed from the dom. </div>
+```html
+ <div tal:condition="product/isPromote" tal:content="product/discount">If product/isPromote is false, this block will be removed from the dom. </div>
+```
 
 `tal:condition` likes `if` in php. 
 
 ## Replace
-> <div tal:replace="123">This entire DIV will be replaced with '123'(not the inner text). </div>
+```html
+ <div tal:replace="123">This entire DIV will be replaced with '123'(not the inner text). </div>
+ ```
