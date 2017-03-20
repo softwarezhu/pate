@@ -13,12 +13,9 @@ class RepeatProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $value = trim($expression);
-        list($item, $items) = preg_split('/\s+/', $value);
-        
-        $exp = $this->resolveExpression($items);
-        
-        $startCode = 'foreach (' . $exp . ' as $_index => $' . $item . '): ';
+        $expression = $this->resolveExpression($expression);
+
+        $startCode = 'foreach (' . $expression . '): ';
         $endCode = 'endforeach; ';
 
         $this->before($element, $startCode);

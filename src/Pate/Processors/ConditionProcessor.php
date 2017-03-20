@@ -13,9 +13,9 @@ class ConditionProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $exp = $this->resolveExpression($expression);
-
-        $startCode = 'if (' . $exp . '): ';
+        $expression = $this->resolveExpression($expression);
+        
+        $startCode = 'if (' . $expression . '): ';
         $endCode = 'endif; ';
         
         $this->before($element, $startCode);

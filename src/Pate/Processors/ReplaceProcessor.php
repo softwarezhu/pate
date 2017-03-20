@@ -13,11 +13,9 @@ class ReplaceProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $value = trim($expression);
+        $expression = $this->resolveExpression($expression);
 
-        $exp = $this->resolveExpression($value);
-        
-        $this->replace($element, $exp);
+        $this->replace($element, $expression);
         
         return true;
     }

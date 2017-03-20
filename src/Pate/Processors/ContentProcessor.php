@@ -13,9 +13,9 @@ class ContentProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $exp = $this->resolveExpression($expression);
+        $expression = $this->resolveExpression($expression);
 
-        $this->text($element, 'echo ' . $exp . ';');
+        $this->text($element, 'echo ' . $expression . ';');
         
         $element->removeAttribute($this->name);
     }

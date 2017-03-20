@@ -8,8 +8,7 @@ use Pate\Processors\RepeatProcessor;
 use Pate\Processors\ReplaceProcessor;
 
 /**
- * Created by PhpStorm.
- * User: lenovo
+ * User: softwarezhu
  * Date: 2017/3/17
  * Time: 15:40
  */
@@ -17,7 +16,7 @@ class PateTemplate
 {
     protected $dom;
     
-    public $processors = [
+    public $defaultProcessors = [
         DefineProcessor::class,
         ConditionProcessor::class,
         RepeatProcessor::class,
@@ -26,9 +25,9 @@ class PateTemplate
         ReplaceProcessor::class,
     ];
 
-    protected $processorInstances = null;
+    protected $processors = null;
     
-    protected $tobeDeleted = null;
+    protected $deleteElement = null;
 
     protected $compileDir;
 
@@ -45,14 +44,32 @@ class PateTemplate
 
         $this->dom = $dom;
         $this->compileDir = sys_get_temp_dir();
+
+        $this->initDefaultProcessors();
     }
     
+    protected function initDefaultProcessors()
+    {
+        $processors = array();
+        foreach ($this->defaultProcessors as $processorClass) {
+            $processors[] = new $processorClass();
+        }
+
+        $this->setProcessors($processors);
+    }
+    
+    public function setProcessors($processors = array())
+    {
+        $this->processors = $processors;
+    }
+
     public function loadHtml($data)
     {
         $name = uniqid() . '.html';
         $this->compiledFileName = $this->compileDir . DIRECTORY_SEPARATOR . $name;
         @$this->dom->loadHTML($data);
     }
+    
     public function loadHtmlFile($fileName)
     {
         $name = uniqid() . '.html';
@@ -62,7 +79,6 @@ class PateTemplate
     
     public function compile()
     {
-        $this->initProcessors();
         $this->parseElement($this->dom);
 
         $content = $this->dom->saveHTML();
@@ -74,36 +90,26 @@ class PateTemplate
         file_put_contents($this->compiledFileName, $replacedContent);
     }
 
-    public function initProcessors()
-    {
-        $processorList = array();
-        foreach ($this->processors as $processorName) {
-            /**
-             * @var TemplateProcessor
-             */
-            $processorList[] = new $processorName();
-        }
-
-        $this->processorInstances = $processorList;
-    }
+    
     /**
-     * @param DOMNode $element
+     * @param \DOMNode $element
      */
     public function parseElement(\DOMNode $element)
     {
-        // 如果有待删除的，则删除之
-        if ($this->tobeDeleted) {
-            $this->tobeDeleted->parentNode->removeChild($this->tobeDeleted);
-            $this->tobeDeleted = null;
+        // delete 
+        if ($this->deleteElement) {
+            $this->deleteElement->parentNode->removeChild($this->deleteElement);
+            $this->deleteElement = null;
         }
+        
         if ($element->hasAttributes()) {
-            foreach ($this->processorInstances as $processor) {
+            foreach ($this->processors as $processor) {
                 if (!$element->hasAttribute($processor->name)) {
                     continue;
                 }
                 $isDelete = $processor->process($element, $element->getAttribute($processor->name));
                 if ($isDelete) {
-                    $this->tobeDeleted = $element;
+                    $this->deleteElement = $element;
                     return;
                 }
             }
