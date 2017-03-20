@@ -6,6 +6,8 @@ use Pate\Processors\ContentProcessor;
 use Pate\Processors\DefineProcessor;
 use Pate\Processors\RepeatProcessor;
 use Pate\Processors\ReplaceProcessor;
+use Pate\Resolvers\DefaultResolver;
+use Pate\Resolvers\SyntaxResolver;
 
 /**
  * User: softwarezhu
@@ -26,6 +28,8 @@ class PateTemplate
     ];
 
     protected $processors = null;
+
+    protected $resolver = null;
     
     protected $deleteElement = null;
 
@@ -36,6 +40,8 @@ class PateTemplate
     protected $debugMode = true;
 
     public $compiledFileName;
+
+    public $compiled = false;
     
     public function __construct()
     {
@@ -45,38 +51,70 @@ class PateTemplate
         $this->dom = $dom;
         $this->compileDir = sys_get_temp_dir();
 
-        $this->initDefaultProcessors();
+        $this->initDefaults();
     }
     
-    protected function initDefaultProcessors()
+    protected function initDefaults()
     {
+        $resolver = new DefaultResolver();
+        $this->setResolver($resolver);
+
         $processors = array();
         foreach ($this->defaultProcessors as $processorClass) {
-            $processors[] = new $processorClass();
+            $processors[] = new $processorClass($resolver);
         }
 
         $this->setProcessors($processors);
     }
-    
+
+    /**
+     * Set Processors.
+     *
+     * @param array $processors
+     */
     public function setProcessors($processors = array())
     {
         $this->processors = $processors;
     }
 
+    /**
+     * Set resolver.
+     *
+     * @param SyntaxResolver $resolver
+     */
+    public function setResolver(SyntaxResolver $resolver)
+    {
+        $this->resolver = $resolver;
+    }
+
+    /**
+     * Load html data.
+     * @param $data
+     */
     public function loadHtml($data)
     {
-        $name = uniqid() . '.html';
+        $name = uniqid() . '.htmlc';
         $this->compiledFileName = $this->compileDir . DIRECTORY_SEPARATOR . $name;
         @$this->dom->loadHTML($data);
     }
-    
+
+    /**
+     * Load html data from file.
+     *
+     * @param $fileName
+     */
     public function loadHtmlFile($fileName)
     {
-        $name = uniqid() . '.html';
+        $name = uniqid() . '.htmlc';
         $this->compiledFileName = $this->compileDir . DIRECTORY_SEPARATOR . $name;
         @$this->dom->loadHTMLFile($fileName);
     }
-    
+
+    /**
+     * Compile the html, and return the compiled file.
+     *
+     * @return string the compiled file.
+     */
     public function compile()
     {
         $this->parseElement($this->dom);
@@ -88,6 +126,10 @@ class PateTemplate
         }, $content);
 
         file_put_contents($this->compiledFileName, $replacedContent);
+
+        $this->compiled = true;
+
+        return $this->compiledFileName;
     }
 
     
@@ -122,9 +164,17 @@ class PateTemplate
         }
     }
 
+    /**
+     * Render the compiled php code by data.
+     * @param array $_data
+     * @param bool $_return
+     * @return mixed
+     */
     public function render($_data = array(), $_return = true)
     {
-        $this->compile();
+        if (!$this->compiled ) {
+            $this->compile();
+        }
 
         extract($_data);
 

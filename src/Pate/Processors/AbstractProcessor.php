@@ -1,5 +1,6 @@
 <?php
 namespace Pate\Processors;
+use Pate\Resolvers\SyntaxResolver;
 
 /**
  * Created by PhpStorm.
@@ -11,14 +12,18 @@ abstract class AbstractProcessor
 {
     public $name;
     
+    public $resolver;
     
+    public function __construct(SyntaxResolver $resolver)
+    {
+        $this->resolver = $resolver;
+    }
+
     abstract public function process(\DOMElement $element, $expression);
 
     public function resolveExpression($expression)
     {
-        $expression = trim($expression);
-        
-        return $expression;
+        return $this->resolver->resolve($expression);
     }
 
     /**
