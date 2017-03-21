@@ -13,10 +13,9 @@ class DefineProcessor extends AbstractProcessor
 
     public function process(\DOMElement $element, $expression)
     {
-        $expression = $this->resolveExpression($expression);
-
         list($name, $var) = $this->splitExpression($expression);
-        
+        $name = $this->resolveExpression($name);
+        $var = $this->resolveExpression($var);
         $startCode = $name . ' = ' . $var . '; ';
         
         $this->before($element, $startCode);
