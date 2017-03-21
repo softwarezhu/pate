@@ -7,17 +7,15 @@ namespace Pate\Processors;
  * Date: 2017/3/17
  * Time: 15:52
  */
-class RepeatProcessor extends AbstractProcessor
+class ForProcessor extends AbstractProcessor
 {
-    public $name = 'tal:repeat';
+    public $name = 'tal:for';
 
     public function process(\DOMElement $element, $expression)
     {
-        list($name, $lists) = $this->splitExpression($expression);
-        $name = $this->resolveExpression($name);
-        $lists = $this->resolveExpression($lists);
+        $expression = $this->resolveExpression($expression);
 
-        $startCode = 'foreach (' . $lists . ' as $_index => ' . $name . '): ';
+        $startCode = 'foreach (' . $expression . '): ';
         $endCode = 'endforeach; ';
 
         $this->before($element, $startCode);

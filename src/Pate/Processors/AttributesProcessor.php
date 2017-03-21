@@ -12,9 +12,7 @@ class AttributesProcessor extends AbstractProcessor
     
     public function process(\DOMElement $element, $expression)
     {
-        $content = $this->resolveExpression($expression);
-        
-        $expressions = preg_split('/;/', $content);
+        $expressions = preg_split('/;/', $expression);
         foreach ($expressions as $i => $expression) {
             $expression = trim($expression);
             if (empty($expression)) {
@@ -22,7 +20,8 @@ class AttributesProcessor extends AbstractProcessor
             }
             list($attr, $val) = $this->splitExpression($expression);
 
-            $element->setAttribute($attr, '<?php echo ' . $val . '; ?>');
+            $exp = $this->resolveExpression($val);
+            $element->setAttribute($attr, '<?php echo ' . $exp . '; ?>');
         }
 
         $element->removeAttribute($this->name);

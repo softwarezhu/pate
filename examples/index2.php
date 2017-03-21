@@ -6,12 +6,16 @@
  * Time: 16:36
  */
 use Pate\PateTemplate;
+use Pate\Resolvers\TALResolver;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $time = microtime(true);
 
 $template = new PateTemplate();
+$resolver = new TALResolver();
+$template->setResolver($resolver);
+
 $template->loadHtmlFile('data/big2.html');
 
 $template->compile();
