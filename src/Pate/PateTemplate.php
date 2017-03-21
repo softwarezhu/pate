@@ -61,7 +61,7 @@ class PateTemplate
 
         $processors = array();
         foreach ($this->defaultProcessors as $processorClass) {
-            $processors[] = new $processorClass($resolver);
+            $processors[] = new $processorClass($this);
         }
 
         $this->setProcessors($processors);
@@ -85,6 +85,14 @@ class PateTemplate
     public function setResolver(SyntaxResolver $resolver)
     {
         $this->resolver = $resolver;
+    }
+
+    /**
+     * @return SyntaxResolver
+     */
+    public function getResolver()
+    {
+        return $this->resolver;
     }
 
     /**

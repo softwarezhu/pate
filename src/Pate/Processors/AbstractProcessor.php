@@ -1,5 +1,6 @@
 <?php
 namespace Pate\Processors;
+use Pate\PateTemplate;
 use Pate\Resolvers\SyntaxResolver;
 
 /**
@@ -12,18 +13,18 @@ abstract class AbstractProcessor
 {
     public $name;
     
-    public $resolver;
+    public $renderer;
     
-    public function __construct(SyntaxResolver $resolver)
+    public function __construct(PateTemplate $renderer)
     {
-        $this->resolver = $resolver;
+        $this->renderer = $renderer;
     }
 
     abstract public function process(\DOMElement $element, $expression);
 
     public function resolveExpression($expression)
     {
-        return $this->resolver->resolve($expression);
+        return $this->renderer->getResolver()->resolve($expression);
     }
 
     /**
