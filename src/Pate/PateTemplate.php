@@ -42,6 +42,14 @@ class PateTemplate
     public $compiledFileName;
 
     public $compiled = false;
+
+    public $forceCompile = false;
+
+    public $compileCacheTime = 3600;
+    
+    public $filePath = null;
+    
+    public $fileData = null;
     
     public function __construct()
     {
@@ -98,12 +106,18 @@ class PateTemplate
     /**
      * Load html data.
      * @param $data
+     * @param null $dataHash data hash, for optimise the compile cache.
      */
-    public function loadHtml($data)
+    public function loadHtml($data, $dataHash = null)
     {
-        $name = uniqid() . '.htmlc';
+        $this->fileData = $data;
+
+        if (!$dataHash) {
+            $dataHash = md5($data);
+        }
+        $name = 'pate_data_' . $dataHash . '.htmlc';
+
         $this->compiledFileName = $this->compileDir . DIRECTORY_SEPARATOR . $name;
-        @$this->dom->loadHTML($data);
     }
 
     /**
@@ -113,9 +127,15 @@ class PateTemplate
      */
     public function loadHtmlFile($fileName)
     {
-        $name = uniqid() . '.htmlc';
+        if (!file_exists($fileName)) {
+            throw new \Exception('File ' . $fileName . ' do not exists');
+        }
+        $this->filePath = $fileName;
+        
+        $fileHash = md5($fileName . filemtime($fileName));
+        $name = 'pate_file_' . $fileHash . '.htmlc';
+
         $this->compiledFileName = $this->compileDir . DIRECTORY_SEPARATOR . $name;
-        @$this->dom->loadHTMLFile($fileName);
     }
 
     /**
@@ -125,6 +145,19 @@ class PateTemplate
      */
     public function compile()
     {
+        // if cached, don't need compile
+        if (!$this->forceCompile && file_exists($this->compiledFileName)) {
+            $mtime = filemtime($this->compiledFileName);
+            if (time() - $mtime < $this->compileCacheTime) {
+                return;
+            }
+        }
+        if ($this->filePath) {
+            $this->dom->loadHTMLFile($this->filePath);
+        } else {
+            $this->dom->loadHTML($this->fileData);
+        }
+
         $this->parseElement($this->dom);
 
         $content = $this->dom->saveHTML();

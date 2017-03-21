@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -143,6 +142,13 @@
             [class=hide_if_mini]
             {
                 display: none;
+            }
+            .adaptimg{
+                width: 100%!important;
+                height: auto!important;
+            }
+            .adapttable{
+                width: 100%!important;
             }
         }
 
@@ -391,7 +397,7 @@
                             </tr>
                             <tr>
                                 <td style="font-size: 12px;font-family:Arial, Helvetica, sans-serif; color: #858585;padding-bottom:10px;" valign="bottom">
-                                    View on a <a target="_blank" href="http://ebm.cheetahmail.com/c/tag/%%t%%/doc.html?email=%%email%%" style="text-decoration: underline;color: #858585;">web browser</a>
+                                    View on a <a target="_blank" href="http://ebm.cheetahmail.com/c/tag/%%t%%/doc.html?email=%%email%%" style="text-decoration: underline;color: #1b73b5;">web browser</a>
                                 </td>
                             </tr>
                             </tbody>
@@ -421,7 +427,7 @@
                                                     <img src="http://litbimg.rightinthebox.com/images/wholesale/201605/zt/s1.png" alt="App" style="display:inline-block;" width="33" height="33" border="0"/><img src="http://litbimg.rightinthebox.com/images/wholesale/201605/zt/s2.jpg" alt="App" class="app_hide" style="display:inline-block;" width="80" height="33" border="0"/>
                                                 </a>
                                             </td>
-                                            <td width="10"> </td>
+                                            <td width="10"> </td>
                                             <td valign="bottom" align="right">
                                                 <a target="_blank" href="https://app.appsflyer.com/com.lightinthebox.android?pid=CRM_Newsletter">
                                                     <img src="http://litbimg.rightinthebox.com/images/wholesale/201605/zt/a1.png" alt="App" style="display:inline-block;" width="33" height="33" border="0"/><img src="http://litbimg.rightinthebox.com/images/wholesale/201605/zt/a2.jpg" alt="App" class="app_hide" style="display:inline-block;" width="80" height="33" border="0"/>
@@ -481,7 +487,7 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <a target="_blank" href="http://www.lightinthebox.com/promotions/super-sale-2016.html?%%newsletter_1%%&content=edmmainpic1%%newsletter_3%%" style="width:100%;display: block;">
+                                    <a  target="_blank" href="http://www.lightinthebox.com?%%newsletter_1%%&content=0%%newsletter_3%%" style="width:100%;display: block;">
                                         <img src="http://litbimg.rightinthebox.com/images/wholesale/201703/0314litb/en.jpg" width="100%"/>
                                     </a>
                                 </td>
@@ -500,7 +506,7 @@
                 <tbody>
                 <tr>
                     <td>
-                        <table style="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <table style="" width="750" cellspacing="0" cellpadding="0" border="0" align="center" class="adapttable">
                             <tbody>
                             <tr>
                                 <td tal:define="product schema/products/0" style="vertical-align: top;" width="36%" height="100%" rowspan="3" class="App64_5pw">
@@ -509,77 +515,86 @@
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="269" height="269" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 24px;font-weight: bold;text-align: center" height="50">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 64px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 16px;line-height:18px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 30px" height="42">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 36px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 16px;line-height:18px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 30px;word-break: break-all;" height="36">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td width="100%">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody><tr>
+                                                    <tbody>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
+                                                    <tr>
                                                         <td width="13%"></td>
-                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="30" align="center">
-                                                            <span>40</span>% Off
+                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="20" align="center">
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="13%"></td>
                                                     </tr>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
                                                     </tbody></table>
-                                                <!-- <span>40</span>% Off -->
+                                                <!-- <span tal:content="product/state">40</span>% Off -->
                                             </td>
                                         </tr>
                                         <tr height="32"></tr>
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="App2pw" width="1.3%"> </td>
+                                <td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/1" width="20%" class="App33_5pw" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>Shop Now </span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/2" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -587,25 +602,27 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/3" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -623,25 +640,27 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td class="App2pw" width="1.3%"> </td>
+                                <td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/4" width="20%" class="App33_5pw" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -649,50 +668,54 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/5" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/6" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -712,7 +735,7 @@
                 <tbody>
                 <tr>
                     <td>
-                        <table style="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <table style="" width="750" cellspacing="0" cellpadding="0" border="0" align="center" class="adapttable">
                             <tbody>
                             <tr>
                                 <td tal:define="product schema/products/0" width="20%" class="app_hide">
@@ -721,43 +744,47 @@
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">Shop Now </span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/1" class="app_hide" width="20%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -765,57 +792,64 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/2" width="20%" class="App33_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App126h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester"  width="148" height="148" border="0" class="App126h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;height:30px;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30" class="App24h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;height:30px;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30" class="App24h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
-                                </td><td class="App2pw" width="1.3%"> </td>
+                                </td><td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/3" style="vertical-align: top;" width="36%" height="100%" rowspan="3" class="App64_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App242h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="269" height="269" border="0" class="App242h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color:#ba2025;font-size:24px;font-weight:bold;text-align:center" height="50" class="App40h">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display:block;height:64px;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;font-size:16px;line-height:18px;font-family:arial-Regular,Helvetica,sans-serif;margin:0 30px;text-align:center;" height="42">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display:block;height:36px;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;font-size:16px;line-height:18px;font-family:arial-Regular,Helvetica,sans-serif;margin:0 30px;text-align:center;word-break: break-all;" height="36">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td width="100%">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody><tr>
+                                                    <tbody>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
+                                                    <tr>
                                                         <td width="13%" class="App20pw"></td>
-                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="30" align="center" class="App24h">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="20" align="center" class="App24h">
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="13%" class="App20pw"></td>
                                                     </tr>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
                                                     </tbody></table>
                                             </td>
                                         </tr>
@@ -834,25 +868,27 @@
                                 <td class="app_hide"></td>
                             </tr>
                             <tr>
-                                <!-- <td class="app_width2p" width="1.3%"> </td> -->
+                                <!-- <td class="app_width2p" width="1.3%"> </td> -->
                                 <td tal:define="product schema/products/4" width="20%" class="app_hide">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -860,50 +896,54 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/5" class="app_hide" width="20%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/6" width="20%" class="App33_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App126h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="App126h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;height:30px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30" class="App24h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;height:30px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30" class="App24h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -923,7 +963,7 @@
                 <tbody>
                 <tr>
                     <td>
-                        <table style="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <table style="" width="750" cellspacing="0" cellpadding="0" border="0" align="center" class="adapttable">
                             <tbody>
                             <tr>
                                 <td tal:define="product schema/products/0" style="vertical-align: top;" width="36%" height="100%" rowspan="3" class="App64_5pw">
@@ -932,77 +972,86 @@
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="269" height="269" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 24px;font-weight: bold;text-align: center" height="50">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 64px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 16px;line-height:18px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 30px" height="42">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 36px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 16px;line-height:18px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 30px;word-break: break-all;" height="36">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td width="100%">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody><tr>
+                                                    <tbody>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
+                                                    <tr>
                                                         <td width="13%"></td>
-                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="30" align="center">
-                                                            <span>40</span>% Off
+                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="20" align="center">
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="13%"></td>
                                                     </tr>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
                                                     </tbody></table>
-                                                <!-- <span>40</span>% Off -->
+                                                <!-- <span tal:content="product/state">40</span>% Off -->
                                             </td>
                                         </tr>
                                         <tr height="32"></tr>
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="App2pw" width="1.3%"> </td>
+                                <td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/1" width="20%" class="App33_5pw" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>Shop Now </span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/2" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1010,25 +1059,27 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/3" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1046,25 +1097,27 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td class="App2pw" width="1.3%"> </td>
+                                <td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/4" width="20%" class="App33_5pw" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival  </span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1072,50 +1125,54 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/5" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/6" class="app_hide" width="20%" valign="top">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="PaladinSport Men's Cycling Jersey Short Sleeve Spring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;word-break: break-all;" height="30">PaladinSport Men's Cycling Jersey Short Sleeve...</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span>New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1135,7 +1192,7 @@
                 <tbody>
                 <tr>
                     <td>
-                        <table style="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <table style="" width="750" cellspacing="0" cellpadding="0" border="0" align="center" class="adapttable">
                             <tbody>
                             <tr>
                                 <td tal:define="product schema/products/0" width="20%" class="app_hide">
@@ -1144,43 +1201,47 @@
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">Shop Now </span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/1" class="app_hide" width="20%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1188,57 +1249,64 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/2" width="20%" class="App33_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App126h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester"  width="148" height="148" border="0" class="App126h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;height:30px;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30" class="App24h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;height:30px;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30" class="App24h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
-                                </td><td class="App2pw" width="1.3%"> </td>
+                                </td><td class="App2pw" width="1.3%"> </td>
                                 <td tal:define="product schema/products/3" style="vertical-align: top;" width="36%" height="100%" rowspan="3" class="App64_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td valign="top">
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App242h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="269" height="269" border="0" class="App242h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color:#ba2025;font-size:24px;font-weight:bold;text-align:center" height="50" class="App40h">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display:block;height:64px;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;font-size:16px;line-height:18px;font-family:arial-Regular,Helvetica,sans-serif;margin:0 30px;text-align:center;" height="42">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display:block;height:36px;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;font-size:16px;line-height:18px;font-family:arial-Regular,Helvetica,sans-serif;margin:0 30px;text-align:center;word-break: break-all;" height="36">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td width="100%">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody><tr>
+                                                    <tbody>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
+                                                    <tr>
                                                         <td width="13%" class="App20pw"></td>
-                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="30" align="center" class="App24h">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:16px" height="20" align="center" class="App24h">
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="13%" class="App20pw"></td>
                                                     </tr>
+                                                    <tr><td width="13%"></td><td bgcolor="#fd7c26" height="5"></td><td width="13%"></td></tr>
                                                     </tbody></table>
                                             </td>
                                         </tr>
@@ -1257,25 +1325,27 @@
                                 <td class="app_hide"></td>
                             </tr>
                             <tr>
-                                <!-- <td class="app_width2p" width="1.3%"> </td> -->
+                                <!-- <td class="app_width2p" width="1.3%"> </td> -->
                                 <td tal:define="product schema/products/4" width="20%" class="app_hide">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1283,50 +1353,54 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.3%"> </td>
+                                <td class="app_hide" width="1.3%"> </td>
                                 <td tal:define="product schema/products/5" class="app_hide" width="20%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
                                         <!-- <tr height="20"></tr> -->
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1.4%"> </td>
+                                <td class="app_hide" width="1.4%"> </td>
                                 <td tal:define="product schema/products/6" width="20%" class="App33_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;border:1px solid #ccc;" width="100%" height="100%;" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" border="0" class="App126h"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="148" height="148" border="0" class="App126h adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #ba2025;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;height:30px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center" height="30" class="App24h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;height:30px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;margin:0 10px;text-align: center;word-break: break-all;" height="30" class="App24h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="20" align="center">
-                                                <span tal:content="product/state">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                             </td>
                                         </tr>
 
@@ -1346,34 +1420,36 @@
                 <tbody>
                 <tr>
                     <td>
-                        <table style="" tal:define="chunks php: array_chunk(schema['products'], 7)" tal:repeat="products chunks" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFFFFF">
+                        <table style="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFFFFF">
                             <tbody>
                             <tr>
                                 <td colspan="7" style="color:#000000;font-size:25px;text-align:center">You May Also Like</td>
                             </tr>
                             <tr>
                                 <td tal:define="product schema/products/0" width="24.25%" class="App32_5pw">
-                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1384,29 +1460,31 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="App2pw" width="1%"> </td>
-                                <td tal:define="product schema/products/0" width="24.25%" class="App32_5pw">
+                                <td class="App2pw" width="1%"> </td>
+                                <td tal:define="product schema/products/1" width="24.25%" class="App32_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1417,29 +1495,31 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td width="1%"> </td>
-                                <td tal:define="product schema/products/1" class="App32_5pw" width="24.25%">
-                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <td width="1%"> </td>
+                                <td tal:define="product schema/products/2" class="App32_5pw" width="24.25%">
+                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1451,29 +1531,31 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1%"> </td>
-                                <td tal:define="product schema/products/2" class="app_hide" width="24.25%">
+                                <td class="app_hide" width="1%"> </td>
+                                <td tal:define="product schema/products/3" class="app_hide" width="24.25%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1495,61 +1577,30 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td tal:define="product schema/products/3" width="24.25%" class="App32_5pw">
-                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
-                                            </td>
-                                        </tr>
-                                        <tr tal:condition="product/price">
-                                            <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
-                                        </tr>
-                                        <tr tal:condition="product/state">
-                                            <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
-                                                <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody><tr>
-                                                        <td width="0%" class="App20pw"></td>
-                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
-                                                        </td>
-                                                        <td width="0%" class="App20pw"></td>
-                                                    </tr>
-                                                    </tbody></table>
-                                            </td>
-                                        </tr>
-                                        <!-- <tr height="20"></tr> -->
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="App2pw" width="1%"> </td>
                                 <td tal:define="product schema/products/4" width="24.25%" class="App32_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1560,29 +1611,66 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td width="1%"> </td>
-                                <td tal:define="product schema/products/5" class="App32_5pw" width="24.25%">
+                                <td class="App2pw" width="1%"> </td>
+                                <td tal:define="product schema/products/5" width="24.25%" class="App32_5pw">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30" class="App28h">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
+                                                        </td>
+                                                        <td width="0%" class="App20pw"></td>
+                                                    </tr>
+                                                    </tbody></table>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr height="20"></tr> -->
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="1%"> </td>
+                                <td tal:define="product schema/products/6" class="App32_5pw" width="24.25%">
+                                    <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
+                                            </td>
+                                        </tr>
+                                        <tr tal:condition="product/price">
+                                            <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
+                                                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody><tr>
+                                                        <td width="0%" class="App20pw"></td>
+                                                        <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1594,29 +1682,31 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="app_hide" width="1%"> </td>
-                                <td tal:define="product schema/products/6" class="app_hide" width="24.25%">
+                                <td class="app_hide" width="1%"> </td>
+                                <td tal:define="product schema/products/7" class="app_hide" width="24.25%">
                                     <table style="font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif; color: #828282;" width="100%" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td>
                                                 <a tal:attributes="href product/link; " target="_blank" href="http://www.lightinthebox.com/paladinsport-men-s-spring-and-summer-style-100-polyester-short-sleeved-cycling-jersey_p1383325.html?edmdiscountkey=9f634a82dded7996767b7654f562cf71&deeplink=1&litb_from=newsletter&user_email=%%email%%&utm_source=newsletter&utm_medium=newsletter&time=1&utm_campaign=LITB20160323&utm_content=edmproduct16-1">
-                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="100%" height="auto" border="0"/></a>
+                                                    <img tal:attributes="src product/image_src; alt product/image_alt" src="http://litbimg.rightinthebox.com/images/176x176/201504/miggiz1427875783673.jpg" alt="Fashion & ClothingFashionring and Summer and Autumn Style 100% Polyester" width="182" height="182" border="0" class="adaptimg"/></a>
                                             </td>
                                         </tr>
                                         <tr tal:condition="product/price">
                                             <td tal:content="product/price" style="color: #f47545;font-size: 14px;font-weight: bold;text-align: center" height="20">USD $29.99</td>
                                         </tr>
                                         <tr>
-                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
+                                            <td tal:content="product/title" style="display: block;height: 30px;overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;font-size: 12px;line-height:14px;font-family:arial-Regular, Helvetica, sans-serif;text-align: center;word-break: break-all;word-wrap: break-word;" height="30">Fashion & ClothingFashion</td>
                                         </tr>
-                                        <tr tal:condition="product/state">
+                                        <tr>
                                             <td style="color: #000000; font-family:arial-Regular" height="24" align="center" class="App16h">
                                                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                                     <tbody><tr>
                                                         <td width="0%" class="App20pw"></td>
                                                         <td style="color: #FFFFFF; background-color: #fd7c26; font-family:arial-Regular; font-size:12px;line-height:24px;border-radius: 4px;" align="center">
-                                                            <span tal:content="product/state">40% OFF</span>
+                                                            <span tal:condition="php:product['btn_style']==1">New Arrival</span>
+                                                            <span tal:condition="php:product['btn_style']==2"><span tal:content="product/state">40</span>% off</span>
+                                                            <span tal:condition="php:product['btn_style']==3">Shop Now</span>
                                                         </td>
                                                         <td width="0%" class="App20pw"></td>
                                                     </tr>
@@ -1789,7 +1879,7 @@
                                     </table>
                                 </td>
                             </tr>
-                            <tr><td height="10"> </td></tr>
+                            <tr><td height="10"> </td></tr>
                             </tbody>
                         </table>
                     </td>
