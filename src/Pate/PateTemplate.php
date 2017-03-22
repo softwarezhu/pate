@@ -153,9 +153,9 @@ class PateTemplate
             }
         }
         if ($this->filePath) {
-            $this->dom->loadHTMLFile($this->filePath);
+            @$this->dom->loadHTMLFile($this->filePath);
         } else {
-            $this->dom->loadHTML($this->fileData);
+            @$this->dom->loadHTML($this->fileData);
         }
 
         $this->parseElement($this->dom);
